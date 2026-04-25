@@ -1,0 +1,32 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+.venv/
+venv/
+*.egg-info/
+dist/
+build/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# Logs — may contain sensitive data
+*.jsonl
+*.log
+
+# Scratch files
+prompots.txt
+test.txt
+
+# Claude Code local settings (contains proxy URL and personal permissions)
+.claude/settings.local.json
+
+# Environment / secrets
+.env
+.env.*
+
+# IDE
+.vscode/
+.idea/
+*.swp

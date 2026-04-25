@@ -1,0 +1,13 @@
+services:
+  sanitizer:
+    build: .
+    ports:
+      - "8080:8080"
+      - "5678:5678" 
+    volumes:
+      - ./config.yaml:/app/config.yaml:ro
+      - ./audit.jsonl:/app/audit.jsonl
+      - ./request_debug.jsonl:/app/request_debug.jsonl
+      - ./sanitizer.log:/app/sanitizer.log
+    environment:
+      - PYTHONUNBUFFERED=1

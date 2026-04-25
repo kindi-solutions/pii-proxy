@@ -1,0 +1,33 @@
+server:
+  host: "0.0.0.0"
+  port: 8080
+
+upstream:
+  base_url: "https://api.anthropic.com"
+  timeout_seconds: 300
+
+sanitization:
+  enabled: true
+  entities:
+    - EMAIL_ADDRESS
+    - PHONE_NUMBER
+    - CREDIT_CARD
+    - IBAN_CODE
+    - SE_PERSONNUMMER
+    - SE_SAMORDNINGSNUMMER
+    - SE_ORGANIZATION_NUMBER
+    - SE_POSTAL_CODE
+    - SECRET_KEY
+  score_threshold: 0.5
+  languages:
+    - en
+    - sv
+
+allowlist:
+  - Claude
+  - Anthropic
+
+audit:
+  enabled: true
+  log_file: audit.jsonl
+  log_original_values: false

@@ -25,4 +25,4 @@ RUN python -m spacy download en_core_web_sm && \
 EXPOSE 8080
 
 CMD ["python", "-m", "debugpy", "--listen", "0.0.0.0:5678", \
-     "-m", "swedsec_sanitizer"]
+     "-m", "piiproxy"]
